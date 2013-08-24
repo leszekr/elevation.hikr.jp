@@ -42,10 +42,17 @@ post '/', :provides=>"json" do
             coords = feature["geometry"]["coordinates"]
             e = get_elevation(coords[0].to_f,coords[1].to_f)
             feature["geometry"]["coordinates"][2] = e
-          else
+          elsif feature["geometry"]["type"]=="LineString"
             feature["geometry"]["coordinates"].each do |coords|
               e = get_elevation(coords[0].to_f,coords[1].to_f)
               coords[2] = e
+            end
+          elsif feature["geometry"]["type"]=="Polygon"
+            feature["geometry"]["coordinates"].each do |coordset|
+              coordset.each do |coords|
+                e = get_elevation(coords[0].to_f,coords[1].to_f)
+                coords[2] = e
+              end
             end
           end
         end

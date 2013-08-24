@@ -11,10 +11,15 @@ end
 def get_elevation(lon,lat)
   lat_floor = lat.floor
   lon_floor = lon.floor
-  if File.exist?("elevation/N#{lat_floor}E#{lon_floor}.hgt")
-#   $latpos = round(1200*($lat-$flat));// numbers between 0 and 1201
-#   $lngpos = 1200-round(1200*($lng-$flng));
-#   $skip = round(2*1201*$lngpos+2*$latpos);
+  lon_floor_s = lon_floor.to_s
+  if(lon_floor<100) 
+    lon_floor_s = "0"+lon_floor_s
+    if(lon_floor<10)
+      lon_floor_s = "0"+lon_floor_s
+    end
+  end
+  p "elevation/N#{lat_floor}E#{lon_floor_s}.hgt"
+  if File.exist?("elevation/N#{lat_floor}E#{lon_floor_s}.hgt")
     latpos = 1201-(1200*(lat-lat_floor)).round
     lngpos = (1200*(lon-lon_floor)).round
     seek = 2*1201*latpos+2*lngpos

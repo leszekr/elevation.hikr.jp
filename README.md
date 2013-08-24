@@ -10,7 +10,7 @@ If you7re trying to run this service and coming up with errors, note the `elevat
 Thanks
 ------
 
-Big thanks to Henri for hosting the service and Frank for setting up the cloud instance and making sure it runs.
+Big thanks to Henri and Frank.
 
 This service wouldn't be possible without NASA's SRTM data.
 

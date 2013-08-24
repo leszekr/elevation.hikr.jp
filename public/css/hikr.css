@@ -1,6 +1,6 @@
 
 header .logo{margin-top:-2px;margin-right:10px;max-height:50px;vertical-align:baseline !important}
-.bkg-japan{background:url(../img/japan.png);background-repeat:no-repeat;background-size:auto 100%;background-position:top left;position:relative}.bkg-japan small{position:absolute;bottom:1em;left:0}
+.bkg-japan{background:url(../img/japan.png);background-repeat:no-repeat;background-size:auto 100%;background-position:top left;position:relative}.bkg-japan .disclaimers{max-width:100%;position:absolute;bottom:1em;left:0}
 #dropForm{position:relative;margin:10px 0}#dropForm textarea{min-height:450px;background:rgba(255,255,255,0.8)}
 #dropForm .dz-message{display:none;margin:auto auto;position:absolute;top:50%;text-align:center;width:100%}
 h1{font-family:'Oxygen',sans-serif}

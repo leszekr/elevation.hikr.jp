@@ -1,15 +1,20 @@
 %section.bck.darkest.text.color.white
   .row.bkg-japan
     .column_6
-      %h3 <br> Add elevation information to GeoJSON.<sup>*</sup>
+      %h3 <br> Add elevation information to GeoJSON.
+      %p Drop a GeoJSON file anywhere this page. You'll get your original GeoJSON data with elevation* added to all point, path and polygon coordinates. 
+      %p 
+      %p This service is in beta testing phase**. We apologize for any inconvenience.
+      %ul.disclaimers
+        %li
+          %small * Currently only Japan is supported.<br>
+        %li
+          %small ** The added elevation may contain gaps (extremally large values). <br>We will filter for those gaps in the future, but for now, please be wary.
       <br><br>
-      You can drop a GeoJSON file to this page. You'll get your original GeoJSON data with elevation added to all point, path and polygon coordinates.
-      <br><br>
-      %small * Currently only Japan is supported.
     .column_6
       %form#dropForm{ :method=>'post'}
         %input{ :type=>"hidden", :name=>"filename", :value=>"geo.json" }
-        %textarea#geojson{ :name=>'geojson', :placeholder=>"Paste GeoJSON data here." }
+        %textarea#geojson{ :name=>'geojson', :placeholder=>"Paste or drop GeoJSON data here." }
         %br
         %input.alert.on-right.button.large{ :type=>'submit', :value=>'Add elevation' }
         %br.clear
@@ -28,24 +33,15 @@
   .row
     .column_4
       %h4.margin-bottom Why?
-      %p I store my hiking courses in GeoJSON files and no elevation service I could find allowed me to easily 
+      %p I store my hiking courses in GeoJSON files and no elevation service I could find allowed me to easily add elevation information.
     .column_4
       %h4.margin-bottom What is Hikr?
-      %p Hikr is an upcoming service for people who like hiking. <super>*</super>
-
+      %p Hikr is an upcoming service for people who like to turn off their computers and go hiking sometimes.
       %br
-      %br
-      %small * Available in Japan at first.
     .column_4
       %h4.margin-bottom What is GeoJSON<br> and where can I get some?
       %p <a href="http://www.geojson.org/" target="_blank">GeoJSON</a> is one of several formats of storing geographical information. Think of it as computer instructions on how to draw a map with points of interest, paths and areas.
       %p You can make your own GeoJSON files using the wonderful <a href="http://geojson.io" target="_blank">geojson.io</a> service from <a href="http://mapbox.com" target="_blank">MapBox</a>.
-%footer.bck.dark.padding
-  .row.margin-top.margin-bottom
-    .column_4
-      &copy; 2013 Hikr.jp
-    .column_8.text.right
-      %a.icon.twitter{ :href=>"https://twitter.com/hikr_jp", :target=>"_blank" }
 :javascript
   function handleFileSelect(evt) {
     evt.stopPropagation();

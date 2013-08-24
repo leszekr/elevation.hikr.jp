@@ -23,7 +23,7 @@ def get_elevation(lon,lat)
     latpos = 1201-(1200*(lat-lat_floor)).round
     lngpos = (1200*(lon-lon_floor)).round
     seek = 2*1201*latpos+2*lngpos
-    i = IO.binread("elevation/N#{lat_floor}E#{lon_floor}.hgt",2,seek)
+    i = IO.binread("elevation/N#{lat_floor}E#{lon_floor_s}.hgt",2,seek)
     if i
       arr = i.unpack("CC")
       e = arr[0]*256+arr[1]

@@ -8,9 +8,11 @@
       %small * Currently only Japan is supported.
     .column_6
       %form#dropForm{ :method=>'post'}
+        %input{ :type=>"hidden", :name=>"filename", :value=>"geo.json" }
         %textarea#geojson{ :name=>'geojson', :placeholder=>"Paste GeoJSON data here." }
         %br
         %input.alert.on-right.button.large{ :type=>'submit', :value=>'Add elevation' }
+        %br.clear
         %br.clear
 %section.bck.theme.padding
   .row
@@ -50,11 +52,21 @@
     evt.preventDefault();
 
     var files = evt.dataTransfer.files; // FileList object.
-    var reader = new FileReader();  
-    reader.onload = function(event) {            
-         document.getElementById('geojson').value = event.target.result;
-    }        
-    reader.readAsText(files[0],"UTF-8");
+    console.log(files);
+    if(files[0].type!="application/json" && !files[0].name.match(/.*\.geojson/)){
+      alert("Please drop json files only"+files[0].type);
+      return false;
+    }
+    if(files[0].size>1024*1024){
+      alert("File size limit is 1MB.")
+      return false;
+    }
+    var reader = new FileReader();
+    reader.onload = function(event) {
+      document.getElementById('geojson').value = event.target.result;
+      document.getElementsByName('filename')[0].value = files[0].name;
+    }
+    reader.readAsText(files[0],"UTF-8");    
   }
 
   function handleDragOver(evt) {

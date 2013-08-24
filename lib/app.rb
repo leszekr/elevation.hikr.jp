@@ -32,6 +32,7 @@ def get_elevation(lon,lat)
 end
 
 post '/', :provides=>"json" do
+  filename = params[:filename] || "geo.json"
   if params[:geojson]
     obj = JSON.parse(params[:geojson])
     if(obj["features"])
@@ -50,7 +51,7 @@ post '/', :provides=>"json" do
         end
       end
     end
-    headers 'Content-Disposition'=> 'attachment; filename="geo.json"'
+    headers 'Content-Disposition'=> 'attachment; filename="'+filename+'"'
     JSON.pretty_generate(obj)
   else 
     redirect '/'

@@ -18,12 +18,12 @@ def get_elevation(lon,lat)
       lon_floor_s = "0"+lon_floor_s
     end
   end
-  p "elevation/N#{lat_floor}E#{lon_floor_s}.hgt"
-  if File.exist?("elevation/N#{lat_floor}E#{lon_floor_s}.hgt")
+  filename =  "elevation/N#{lat_floor}E#{lon_floor_s}.hgt"
+  if File.exist?(filename)
     latpos = 1201-(1200*(lat-lat_floor)).round
     lngpos = (1200*(lon-lon_floor)).round
     seek = 2*1201*latpos+2*lngpos
-    i = IO.binread("elevation/N#{lat_floor}E#{lon_floor_s}.hgt",2,seek)
+    i = IO.binread(filename,2,seek)
     if i
       arr = i.unpack("CC")
       e = arr[0]*256+arr[1]

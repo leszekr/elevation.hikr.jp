@@ -13,7 +13,11 @@
   %body
     %header.bck.margin-top.margin-bottom
       .row
-        .column_12
+        .column_8
           %img.logo.on-left{ :src=>"/img/hikr-jp-big.png", :alt=>"Hikr" } 
           %h2.text Elevation Service
+        .column_4
+          %h5.text.right.hide-phone
+            %a.icon.github.margin-right{ :href=>"https://github.com/leszekr/elevation.hikr.jp", :target=>"_blank" }
+            %a.icon.twitter{ :href=>"https://twitter.com/leszek_r", :target=>"_blank" } 
     =yield

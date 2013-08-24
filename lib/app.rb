@@ -8,17 +8,41 @@ get '/' do
 	haml :home
 end
 
-def get_elevation(lon,lat)
+def get_filename(lon,lat)
   lat_floor = lat.floor
   lon_floor = lon.floor
-  lon_floor_s = lon_floor.to_s
-  if(lon_floor<100) 
+
+  lon_floor_s = lon_floor.abs.to_s
+  if(lon_floor.abs<100) 
     lon_floor_s = "0"+lon_floor_s
-    if(lon_floor<10)
+    if(lon_floor.abs<10)
       lon_floor_s = "0"+lon_floor_s
     end
   end
-  filename =  "elevation/N#{lat_floor}E#{lon_floor_s}.hgt"
+
+  if(lon_floor<0)
+    lon_floor_s = "W"+lon_floor_s
+  else
+    lon_floor_s = "E"+lon_floor_s
+  end
+
+  lat_floor_s = lat_floor.abs.to_s
+  if(lat_floor.abs<10)
+    lat_floor_s = "0" + lat_floor_s
+  end
+
+  if(lat_floor<0)
+    lat_floor_s = "S"+lat_floor_s
+  else
+    lat_floor_s = "N"+lat_floor_s
+  end
+
+  "elevation/#{lat_floor_s}#{lon_floor_s}.hgt"
+end
+
+def get_elevation(lon,lat)
+  filename = get_filename lon, lat
+  p filename
   if File.exist?(filename)
     latpos = 1201-(1200*(lat-lat_floor)).round
     lngpos = (1200*(lon-lon_floor)).round

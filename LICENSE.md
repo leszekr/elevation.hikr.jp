@@ -1,6 +1,8 @@
+The MIT License
+
 Copyright (C) 2013 Leszek Rybicki (@leszek_r)
 
-Portions copytight (tuktuk) by Javi Jiménez Villar (@soyjavi)
+Portions copytight (tuktuk, MIT license) by Javi Jiménez Villar (@soyjavi)
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

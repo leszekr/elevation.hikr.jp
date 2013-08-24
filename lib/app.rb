@@ -42,6 +42,8 @@ end
 
 def get_elevation(lon,lat)
   filename = get_filename lon, lat
+  lat_floor = lat.floor
+  lon_floor = lon.floor
   p filename
   if File.exist?(filename)
     latpos = 1201-(1200*(lat-lat_floor)).round

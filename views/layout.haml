@@ -1,0 +1,19 @@
+!!! 5
+%html
+  %head
+    %meta{ :charset=>"utf-8" }
+    %meta{ :content => "Hikr Elevation Service, GeoJSON parser", :name => "description" }
+    %meta{ :content => "Leszek Rybicki", :name => "author" }
+    %meta{ :content => "3 days", :name => "revisit-after" }
+    %title Hikr Elevation Service
+    %link{ :rel=>"stylesheet", :href=>"/css/tuktuk.css" }
+    %link{ :rel=>"stylesheet", :href=>"/css/tuktuk.icons.css" }
+    %link{ :rel=>"stylesheet", :href=>"/css/tuktuk.theme.css" }
+    %link{ :rel=>"stylesheet", :href=>"/css/hikr.css" }
+  %body
+    %header.bck.margin-top.margin-bottom
+      .row
+        .column_12
+          %img.logo.on-left{ :src=>"/img/hikr-jp-big.png", :alt=>"Hikr" } 
+          %h2.text Elevation Service
+    =yield

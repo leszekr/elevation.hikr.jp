@@ -44,7 +44,11 @@
       %h4.margin-bottom What is GeoJSON<br> and where can I get some?
       %p <a href="http://www.geojson.org/" target="_blank">GeoJSON</a> is one of several formats of storing geographical information. Think of it as computer instructions on how to draw a map with points of interest, paths and areas.
       %p You can make your own GeoJSON files using the wonderful <a href="http://geojson.io" target="_blank">geojson.io</a> service from <a href="http://mapbox.com" target="_blank">MapBox</a>.
+%script{ :type=>"text/javascript", :src=>"/js/behave.js" }
 :javascript
+  var editor = new Behave({
+    textarea: document.getElementById('geojson')
+  });
   function handleFileSelect(evt) {
     evt.stopPropagation();
     evt.preventDefault();

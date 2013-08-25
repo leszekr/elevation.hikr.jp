@@ -79,7 +79,7 @@ body .bck.color {
   background-color: #025772;
 }
 body .bck.dark {
-  background-color: #171727;
+  background-color: #123;
 }
 body .bck.theme {
   background-color: #2ca9ad;
@@ -93,11 +93,11 @@ body .bck.alert {
 }
 body .bck.color,
 body .bck.dark {
-  color: #fcfcfd;
+  color: #fcfdfe;
 }
 body .bck.color hr,
 body .bck.dark hr {
-  background: #282843;
+  background: #1c3854;
   background: rgba(0,0,0,0.2);
 }
 body .bck.color a,

@@ -5,7 +5,7 @@
 @import url("http://fonts.googleapis.com/css?family=Oxygen&subset=latin,latin-ext");
 @import url("http://fonts.googleapis.com/css?family=Gochi+Hand");
 body {
-  color: #025772;
+  color: #738790;
   background: #fff;
   font-size: 15px;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -20,11 +20,11 @@ body {
 /* ====================== TAGs ====================== */
 }
 body:not(.color):not(.dark) a {
-  color: #f30;
+  color: #e95223;
 }
 body:not(.color):not(.dark) a:not(.button):hover,
 body:not(.color):not(.dark) a:not(.button):active {
-  color: #2ca9ad;
+  color: #a63626;
 }
 body p {
   margin: 0.5em 0;
@@ -53,11 +53,11 @@ body nav[data-tuktuk=menu] > a:hover {
   background-color: rgba(0,0,0,0.05);
 }
 body nav[data-tuktuk=menu] > a.active {
-  color: #025772;
+  color: #738790;
   background-color: rgba(0,0,0,0.1);
 }
 body nav[data-tuktuk=menu] > a.active .icon {
-  color: #2ca9ad;
+  color: #a63626;
 }
 body nav[data-tuktuk=menu] > a:not(.active):not(:hover) > .icon,
 body nav[data-tuktuk=menu] > a small {
@@ -76,16 +76,16 @@ body .bck.light {
   background-color: #f6f5f3;
 }
 body .bck.color {
-  background-color: #025772;
+  background-color: #738790;
 }
 body .bck.dark {
-  background-color: #123;
+  background-color: #4a5a61;
 }
 body .bck.theme {
-  background-color: #2ca9ad;
+  background-color: #a63626;
 }
 body .bck.alert {
-  background-color: #f30 !important;
+  background-color: #e95223 !important;
 }
 body .bck.theme,
 body .bck.alert {
@@ -93,11 +93,11 @@ body .bck.alert {
 }
 body .bck.color,
 body .bck.dark {
-  color: #fcfdfe;
+  color: #fdfdfe;
 }
 body .bck.color hr,
 body .bck.dark hr {
-  background: #1c3854;
+  background: #596c74;
   background: rgba(0,0,0,0.2);
 }
 body .bck.color a,
@@ -119,10 +119,10 @@ body .color.white {
   color: #fff !important;
 }
 body .color.theme {
-  color: #2ca9ad !important;
+  color: #a63626 !important;
 }
 body .color.default {
-  color: #025772 !important;
+  color: #738790 !important;
 }
 body form input[type="text"],
 body .form input[type="text"],
@@ -149,7 +149,7 @@ body .form select,
 body form textarea,
 body .form textarea {
   background-color: #fff;
-  color: #025772;
+  color: #738790;
   border: 1px solid #dce4ec;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -211,9 +211,9 @@ body form select:required,
 body .form select:required,
 body form textarea:required,
 body .form textarea:required {
-  border-color: #ff6640 !important;
-  color: #f30;
-  background-color: #ffebe5;
+  border-color: #ef7d5a !important;
+  color: #e95223;
+  background-color: #fdeee9;
 }
 body form input[type="text"].error:focus,
 body .form input[type="text"].error:focus,
@@ -263,8 +263,8 @@ body form select:required:focus,
 body .form select:required:focus,
 body form textarea:required:focus,
 body .form textarea:required:focus {
-  border-color: #f30 !important;
-  background-color: #fff5f2;
+  border-color: #e95223 !important;
+  background-color: #fef6f4;
 }
 body form input[type="text"]:focus,
 body .form input[type="text"]:focus,
@@ -308,13 +308,13 @@ body form input[type="checkbox"]:checked,
 body .form input[type="checkbox"]:checked,
 body form input[type="radio"]:checked,
 body .form input[type="radio"]:checked {
-  border-color: #2ca9ad;
+  border-color: #a63626;
 }
 body form input[type="checkbox"]:checked:after,
 body .form input[type="checkbox"]:checked:after,
 body form input[type="radio"]:checked:after,
 body .form input[type="radio"]:checked:after {
-  color: #2ca9ad;
+  color: #a63626;
 }
 body form input[type="checkbox"],
 body .form input[type="checkbox"] {
@@ -347,26 +347,26 @@ body [data-control="checkbox"] label {
   background: #8c8069;
 }
 body [data-control="checkbox"].checked {
-  background-color: #2ca9ad;
+  background-color: #a63626;
   color: #fff !important;
 }
 body [data-control="checkbox"].checked label {
-  background-color: #217f82;
+  background-color: #7d291c;
 }
 body table {
   background: #fff;
-  color: #025772;
-  border: 0.1em solid #9ee6fd;
+  color: #738790;
+  border: 0.1em solid #dce1e3;
 }
 body table tr:nth-child(even) td {
-  background-color: #ecfaff;
+  background-color: #f8f9f9;
 }
 body table th {
-  background-color: #9ee6fd;
+  background-color: #dce1e3;
   color: #fff;
 }
 body table td.highlight {
-  background-color: #2ca9ad !important;
+  background-color: #a63626 !important;
   color: #fff;
 }
 body .button,
@@ -382,7 +382,7 @@ body button:not(.transparent):not(:disabled) {
   -ms-border-radius: 4px;
   -o-border-radius: 4px;
   border-radius: 4px;
-  background-color: #2ca9ad;
+  background-color: #a63626;
   -webkit-box-shadow: inset 0 -1px rgba(0,0,0,0.1), 0 1px rgba(0,0,0,0.075);
   -moz-box-shadow: inset 0 -1px rgba(0,0,0,0.1), 0 1px rgba(0,0,0,0.075);
   -ms-box-shadow: inset 0 -1px rgba(0,0,0,0.1), 0 1px rgba(0,0,0,0.075);
@@ -412,7 +412,7 @@ body button:not(.transparent):not(:disabled):active {
 }
 body .button:not(.transparent):not(:disabled).secondary,
 body button:not(.transparent):not(:disabled).secondary {
-  background-color: #a7babe;
+  background-color: #772419;
 }
 body .button:not(.transparent):not(:disabled).success,
 body button:not(.transparent):not(:disabled).success {
@@ -420,7 +420,7 @@ body button:not(.transparent):not(:disabled).success {
 }
 body .button:not(.transparent):not(:disabled).alert,
 body button:not(.transparent):not(:disabled).alert {
-  background-color: #f30;
+  background-color: #e95223;
 }
 body .button.transparent,
 body button.transparent {
@@ -430,8 +430,8 @@ body .button[disabled=disabled],
 body button[disabled=disabled],
 body .button:disabled,
 body button:disabled {
-  background-color: #dee5e7;
-  color: #9aafb4 !important;
+  background-color: #972e1f;
+  color: #6f2217 !important;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
@@ -464,12 +464,12 @@ body .button {
   font-family: 'Oxygen', sans-serif;
 }
 [data-tuktuk="modal"] header {
-  background: #2ca9ad !important;
+  background: #a63626 !important;
   color: #fff;
 }
 [data-tuktuk=boxes] aside {
   background: #fff;
-  color: #0383ac;
+  color: #8899a1;
 }
 [data-tuktuk=boxes] aside header {
   -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.1);
@@ -486,6 +486,6 @@ body .button {
   border-radius: 2px;
 }
 [data-tuktuk=boxes] aside [data-menu] > a:not(.button).active {
-  background: #2ca9ad;
+  background: #a63626;
   color: #fff;
 }
